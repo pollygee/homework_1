@@ -49,7 +49,7 @@ class TestMeme < Minitest::Test
 
   def test_perimeter_right
     t = Triangle.new(3,4,5)
-    assert_equal 12, t.perimeter
+    assert_equal 1,2 t.perimeter
   end
 
   def test_perimeter_eq
