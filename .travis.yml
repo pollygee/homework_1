@@ -1,8 +1,5 @@
 language: ruby
 rvm:
-  - 2.2.0
-script:
-  - TEST=true bundle exec rake db:migrate
-  - bundle exec rake test
+  - 2.2.2p95
 
-env: CI=true
+script: ruby triangle_test.rb
