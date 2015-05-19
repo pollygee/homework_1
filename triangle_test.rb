@@ -2,7 +2,7 @@
 # 2. Run `ruby triangle_test.rb`. You should see 6 error messages.
 # 3. Implement the Triangle class until all 6 tests are passing.
 require "minitest/autorun"
-require 'pry'
+#require 'pry'
 
 class Triangle
   def initialize(side1, side2, side3)
