@@ -5,3 +5,6 @@ TIY Homework Due May 20
 Triangle test program
 
 :shipit:
+
+
+![squirrel](./image_squirrel.jpg)

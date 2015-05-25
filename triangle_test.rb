@@ -6,18 +6,28 @@ require "minitest/autorun"
 
 class Triangle
   def initialize(side1, side2, side3)
-    @side1 = side1
-    @side2 = side2
-    @side3 = side3
+      @side1 = side1
+      @side2 = side2
+      @side3 = side3
+  end
+
+  def validate (side1, side2, side3)
+    if side1.class == Fixnum && side2.class == Fixnum && side3.class == Fixnum
+      return true
+    else
+      raise 'You need to enter a number that is > 0'
+    end
   end
 
   def kind 
-    if (@side1 == @side2 && @side2 == @side3)
-      return :equilateral
-    elsif (@side1 == @side2 || @side1 == @side3 || @side2 == @side3)
-      return :isosceles
-    else 
-      return :scalene
+    if validate @side1,@side2,@side3
+      if @side1 == @side2 && @side2 == @side3
+        return :equilateral
+      elsif (@side1 == @side2 || @side1 == @side3 || @side2 == @side3)
+        return :isosceles
+      else 
+        return :scalene
+      end
     end
   end
 
@@ -56,6 +66,11 @@ class TestMeme < Minitest::Test
     t = Triangle.new 10,20,30
     assert_equal 60, t.perimeter
   end
+
+  def test_triangle_side_0
+    t = Triangle.new 0,1,2
+    assert_equal nil, t
+  end 
 end
 
 
