@@ -7,3 +7,4 @@ Triangle test program
 :shipit:
 
 
+![squirrel](./image_squirrel.jpg)

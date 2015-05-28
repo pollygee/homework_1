@@ -67,10 +67,6 @@ class TestMeme < Minitest::Test
     assert_equal 60, t.perimeter
   end
 
-  def test_triangle_side_0
-    t = Triangle.new 0,1,2
-    assert_equal nil, t
-  end 
 end
 
 
